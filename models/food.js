@@ -16,6 +16,12 @@ module.exports = (sequelize, DataTypes) => {
       })
       Food.hasMany(models.Favourite)
     }
+
+    static getDate(date) {
+      let newDate = new Date(date).toDateString();
+      return newDate
+    }
+    
   };
   Food.init({
     food_name: {

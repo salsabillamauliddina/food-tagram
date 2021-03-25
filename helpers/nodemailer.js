@@ -10,7 +10,7 @@ let transporter = nodemailer.createTransport({
 
 const sendMail = (email) => {
   const option = {
-    from: '"food-tagram" <rama.exvius@gmail.com>',
+    from: '"food-tagram" <kofivanilla@gmail.com>',
     to: email,
     subject: "Thanks for registering on food-tagram",
     text: "You can share your memories here!!"
