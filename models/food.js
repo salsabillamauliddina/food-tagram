@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Food.init({
     food_name: DataTypes.STRING,
+    origin: DataTypes.STRING,
     category: DataTypes.STRING,
     description: DataTypes.STRING
   }, {
