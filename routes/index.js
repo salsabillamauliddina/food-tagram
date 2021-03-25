@@ -1,14 +1,26 @@
-const router = require('express').Router()
-const homeRoute = require('./home-route')
-const authRoute = require('./auth-router')
-const failedRoute = require('./failed-route')
-const foodListRoute = require('./food-list-router')
-const myFoodRoute = require('./my-food-router')
+const express = require('express');
+const router = express.Router();
+const homeRoute = require('./homeRoute');
+const aboutUsRoute = require('./aboutUsRoute');
+const myFoodRoute = require('./myFoodRoute');
+const foodListRoute = require('./foodListRoute');
+const signUpRoute = require('./signUpRoute');
+const loginRoute = require('./loginRoute');
+const failedRoute = require('./failedRoute')
+const logoutRoute = require('./logoutRoute');
+const auth = require('../middleware/auth')
 
-router.use(homeRoute)
-router.use(authRoute)
-router.use(failedRoute)
-router.use(foodListRoute)
-router.use(myFoodRoute)
+router.use('/', loginRoute)
+router.use('/', homeRoute)
+router.use('/', signUpRoute)
+router.use('/', failedRoute)
+router.use('/', logoutRoute)
+
+router.use(auth)
+
+router.use('/', aboutUsRoute)
+router.use('/', foodListRoute)
+router.use('/', myFoodRoute)
 
 module.exports = router
+
