@@ -12,7 +12,7 @@ class ControllerMyFood {
             ]
         })
         .then(data => {
-            console.log(data);
+            console.log(data, 'mayfoood');
             res.render('myfood', { data, first_name, last_name })
         })
         .catch(err => {

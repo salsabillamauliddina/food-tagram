@@ -21,6 +21,7 @@ class ControllerFoodList {
 
         Food.create({food_name, origin, category, description, imgUrl})
         .then(data => {
+            console.log(data, 'dataaa');
             res.redirect('/foodlist')
         })
         .catch(err => {

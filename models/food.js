@@ -59,7 +59,16 @@ module.exports = (sequelize, DataTypes) => {
           msg: `Description must be require`
         }
       }
-    } 
+    },
+    imgUrl: {
+      type: DataTypes.STRING,
+      validate: {
+        isUrl: {
+          args: false,
+          msg: "Please Insert URL"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Food',

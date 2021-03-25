@@ -19,9 +19,9 @@
             <tbody>
                 <% data.forEach(el => { %>
                     <tr>
-                        <td><img src="<%= el.imgUrl %>" alt="food"></td>
-                        <td><%= el.food_name %></td>
-                        <td><%= el.favoriteListName %></td>
+                        <td><img src="<%= el.Food.imgUrl %>" alt="food"></td>
+                        <td><%= el.Food.food_name %></td>
+                        <td><%= el.favListName %></td>
                         <td><%= el.listDescription %></td>
                         <td><%= el.createdAt.toDateString() %></td>
                         <td>
