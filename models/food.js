@@ -18,10 +18,42 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Food.init({
-    food_name: DataTypes.STRING,
-    origin: DataTypes.STRING,
-    category: DataTypes.STRING,
-    description: DataTypes.STRING
+    food_name: {
+      type : DataTypes.STRING,
+      validate: {
+        notEmpty : {
+          args: true,
+          msg: `Food name must be required!`
+        }
+      }
+    } ,
+    origin: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: `Origin must be required!`
+        }
+      }
+    } ,
+    category: {
+      type : DataTypes.STRING,
+      validate : {
+        notEmpty : {
+          args: true,
+          msg: `Category must be required!`
+        }
+      }
+    } ,
+    description: {
+      type : DataTypes.STRING,
+      validate: {
+        notEmpty : {
+          args: true,
+          msg: `Description must be require`
+        }
+      }
+    } 
   }, {
     sequelize,
     modelName: 'Food',

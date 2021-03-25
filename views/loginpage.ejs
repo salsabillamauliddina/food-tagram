@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div>
-    <h1>Login</h1>
-  </div>
-  <div>
-    <form action="/login" method="POST">
-      <div>
-        <label for="email" name="email">EMail:</label><br>
-        <input type="text" name="email" required>
-      </div>
-      <div>
-        <label for="password" name="password">Password:</label><br>
-        <input type="password" name="password" required>
-      </div>
-      <button type="submit"></button>
-      <button><a href="/">Cancel</a></button>
-    </form>
-  </div>
-</body>
+    <%- include('partials/head') %>
+    <body>
+        <%- include('partials/nav') %>
+        <div class="mid">
+          <form class="w-50 p-3" action="/login" method="POST">
+              <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+              <label for="email" class="visually-hidden">Email</label>
+              <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+              <label for="inputPassword" class="visually-hidden">Password</label>
+              <input type="password" name="password" class="form-control" placeholder="Password" required>
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+              <p class="mt-5 mb-3 text-muted">&copy; FoodTagram 2021</p>
+            </form>
+        </div>
+        
+        <%- include('partials/script') %> 
+    </body>
 </html>

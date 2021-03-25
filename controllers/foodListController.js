@@ -11,15 +11,25 @@ class FoodListController {
     })
   }
 
-  static addFoodPage(req, res) {}
+  static addFoodPage(req, res) {
 
-  static addFoodPost(req, res) {}
+  }
 
-  static editFoodPage(req, res) {}
+  static addFoodPost(req, res) {
 
-  static editFoodPost(req, res) {}
+  }
 
-  static deleteFood(req, res) {}
+  static editFoodPage(req, res) {
+
+  }
+
+  static editFoodPost(req, res) {
+
+  }
+
+  static deleteFood(req, res) {
+    
+  }
 }
 
 module.exports = FoodListController;
