@@ -1,0 +1,10 @@
+[
+    {
+        "first_name" : "Rama",
+        "last_name" : "Cahya",
+        "username" : "rmchy",
+        "password" : "rama123",
+        "email" : "rama@mail.com",
+        "birth_date": "1998-02-24"
+    }
+]
