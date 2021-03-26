@@ -5,6 +5,10 @@
     font-weight: 700;
     box-sizing: border-box;
   }
+
+  img {
+    width: 250px;
+  }
   
   #header{
     padding: 20px;
